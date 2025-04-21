@@ -37,7 +37,7 @@
         </div>
       @endif
 
-      <form action="{{ route('auth.AkunStore') }}" method="POST">
+      <form action="{{ route('auth.register.post') }}" method="POST">
         @csrf
         <div class="input-group mb-3">
           <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" placeholder="Nama Lengkap" value="{{ old('nama') }}" required>

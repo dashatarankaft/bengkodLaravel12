@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Obat;
+use App\Models\Periksa;
 use Illuminate\Http\Request;
 
 class DokterController extends Controller
 {
+    public function dashboardDokter(){
+        $periksas = Periksa::all(); 
+        $obats = Obat::all(); 
+        return view('dokter.dashboard', compact('periksas', 'obats'));
+    }
+
     public function showObat()
     {
         $obats = Obat::all();

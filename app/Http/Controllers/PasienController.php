@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class PasienController extends Controller
 {
+
+    public function dashboardPasien(){
+        $periksas = Periksa::all(); 
+        return view('pasien.dashboard', compact('periksas'));
+    }
+
     public function showPeriksas()
     {
         $Detailperiksas = DetailPeriksa::all(); 
