@@ -32,6 +32,10 @@ Route::middleware('auth')->group(function () {
         Route::post('/dokter/obat', [DokterController::class, 'storeObat'])->name('dokter.obatStore');
         Route::get('/dokter/obat/edit/{id}', [DokterController::class, 'editObat'])->name('dokter.obatEdit');
         Route::put('/dokter/obat/update/{id}', [DokterController::class, 'updateObat'])->name('dokter.obatUpdate');
+
+        Route::get('/dokter/periksa/edit/{id}', [DokterController::class, 'editPeriksa'])->name('dokter.periksaEdit');
+        Route::put('/dokter/periksa/update/{id}', [DokterController::class, 'updatePeriksa'])->name('dokter.periksaUpdate');
+
         Route::delete('/dokter/obat/delete/{id}', [DokterController::class, 'destroyObat'])->name('dokter.obatDelete');
         
         Route::get('/dokter/periksa', function () {
