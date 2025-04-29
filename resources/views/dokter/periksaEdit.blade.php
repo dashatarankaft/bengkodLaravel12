@@ -90,7 +90,7 @@
                                     <div class="form-group">
     <label for="id_obat">Pilih Obat</label>
     <select 
-    class="form-control text-danger" 
+    class="form-control" 
     id="id_obat" 
     name="id_obat[]" 
     multiple 
@@ -100,7 +100,7 @@
         
         @foreach ($obats as $obat)
         <option value="{{ $obat->id }}" {{ in_array($obat->id, $selectedObats) ? 'selected' : '' }}>
-    {{ $obat->nama }}
+    {{ $obat->nama_obat }}
 </option>
 
         @endforeach
